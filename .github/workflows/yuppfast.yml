@@ -44,22 +44,18 @@ jobs:
         run: |
           python fast.py
 
-      - name: Commit changes if any
+      - name: Commit playlist only
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
-          git add -A
+          git add yupptvfast.m3u
 
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No playlist changes."
           else
             git commit -m "Playlist auto-updated on $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           fi
-
-      - name: Pull latest changes from remote
-        run: |
-          git pull origin main --rebase
 
       - name: Push changes
         run: |
