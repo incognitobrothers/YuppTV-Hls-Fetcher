@@ -28,7 +28,7 @@ jobs:
           pip install urllib3
 
       - name: Run script
-        run: "python ./scripts/yuppfast.py"
+        run: "python fast.py"
 
       - name: Commit changes if any
         run: |
