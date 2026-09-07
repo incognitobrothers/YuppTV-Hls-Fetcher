@@ -8,7 +8,7 @@ if not url.startswith(("http://", "https://")):
     url = "https://" + url
 
 headers = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Hotstar;in.startv.hotstar/25.02.24.8.11169 (Android/15)"
 }
 
 try:
